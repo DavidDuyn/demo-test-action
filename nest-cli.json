@@ -1,0 +1,20 @@
+{
+  "monorepo": true,
+  "root": "apps/reniec",
+  "sourceRoot": "apps/reniec/src",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/reniec/tsconfig.app.json"
+  },
+  "projects": {
+    "reniec": {
+      "type": "application",
+      "root": "apps/reniec",
+      "entryFile": "main",
+      "sourceRoot": "apps/reniec/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/reniec/tsconfig.app.json"
+      }
+    }
+  }
+}

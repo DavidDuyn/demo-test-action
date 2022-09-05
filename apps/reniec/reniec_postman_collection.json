@@ -1,0 +1,49 @@
+{
+  "info": {
+    "_postman_id": "f6c6c2cd-5084-4c31-8e1e-2c9592817846",
+    "name": "requests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "RENIEC",
+      "item": [
+        {
+          "name": "Connect",
+          "request": {
+            "description": "",
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n\t\"sip_k1\":  \"123\"\n}" },
+            "url": {
+              "raw": "{{ _.baseUrl }}/reniec/connect",
+              "host": ["{{ _", "baseUrl }}"],
+              "path": ["reniec", "connect"]
+            },
+            "auth": {}
+          },
+          "response": []
+        },
+        {
+          "name": "Query",
+          "request": {
+            "description": "",
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"sip_authenticator\": \"123\",\n\t\"sip_user\": \"123\",\n\t\"sip_document\": \"1234\"\n}"
+            },
+            "url": {
+              "raw": "{{ _.baseUrl }}/reniec/query",
+              "host": ["{{ _", "baseUrl }}"],
+              "path": ["reniec", "query"]
+            },
+            "auth": {}
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

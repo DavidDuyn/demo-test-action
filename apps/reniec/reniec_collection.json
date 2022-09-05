@@ -1,0 +1,165 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2022-08-01T07:22:02.737Z",
+  "__export_source": "insomnia.desktop.app:v2022.4.2",
+  "resources": [
+    {
+      "_id": "req_5f2aaf7bd6fe446e9af332904b30ac79",
+      "parentId": "fld_c3c038e2c21d417d9cb731e4ae07b2c5",
+      "modified": 1659338417011,
+      "created": 1659338299123,
+      "url": "{{ _.baseUrl }}/reniec/query",
+      "name": "Query",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"sip_authenticator\": \"123\",\n\t\"sip_user\": \"123\",\n\t\"sip_document\": \"1234\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_9545a1730b0d4b3ca0546ff6066cf5ec"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1659338299123,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_c3c038e2c21d417d9cb731e4ae07b2c5",
+      "parentId": "wrk_67f2d053f9f54d1097c7294da59033de",
+      "modified": 1659338125052,
+      "created": 1659338125052,
+      "name": "RENIEC",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1659338125052,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_67f2d053f9f54d1097c7294da59033de",
+      "parentId": null,
+      "modified": 1659076867935,
+      "created": 1657725611778,
+      "name": "New Document",
+      "description": "",
+      "scope": "design",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_41cd227fe4dc466e82a3da2caad2c334",
+      "parentId": "fld_c3c038e2c21d417d9cb731e4ae07b2c5",
+      "modified": 1659338367324,
+      "created": 1659338130504,
+      "url": "{{ _.baseUrl }}/reniec/connect",
+      "name": "Connect",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"sip_k1\":  \"123\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_b670514851e64dd78f59b0cc1fb44cd5"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1659338130504,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_c080404f64691cfc6771c308d582c2ce4af0033e",
+      "parentId": "wrk_67f2d053f9f54d1097c7294da59033de",
+      "modified": 1658489367475,
+      "created": 1657725611788,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1657725611788,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_c080404f64691cfc6771c308d582c2ce4af0033e",
+      "parentId": "wrk_67f2d053f9f54d1097c7294da59033de",
+      "modified": 1657725739811,
+      "created": 1657725611790,
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "key": "PHPSESSID",
+          "value": "d1a473994105011172de28c0bd8e5ce1",
+          "domain": "apirenaper.idear.gov.ar",
+          "path": "/",
+          "hostOnly": true,
+          "creation": "2022-07-13T15:22:19.810Z",
+          "lastAccessed": "2022-07-13T15:22:19.810Z",
+          "id": "24771895266630617"
+        }
+      ],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_d459faa45bdb4560b439e1629b01532f",
+      "parentId": "wrk_67f2d053f9f54d1097c7294da59033de",
+      "modified": 1658490757586,
+      "created": 1657725611785,
+      "fileName": "Providers hub",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "uts_cc5c5438219b4d0bb613b487806e3444",
+      "parentId": "wrk_67f2d053f9f54d1097c7294da59033de",
+      "modified": 1657725611792,
+      "created": 1657725611792,
+      "name": "Example Test Suite",
+      "_type": "unit_test_suite"
+    },
+    {
+      "_id": "env_3baf3d43dfde48b39149b80aa7e937c8",
+      "parentId": "env_c080404f64691cfc6771c308d582c2ce4af0033e",
+      "modified": 1658490536190,
+      "created": 1658489374128,
+      "name": "localhost",
+      "data": {
+        "baseUrl": "localhost:3000",
+        "username": "test",
+        "password": "test",
+        "transactionNumber": 1
+      },
+      "dataPropertyOrder": {
+        "&": ["baseUrl", "username", "password", "transactionNumber"]
+      },
+      "color": "#25ef3c",
+      "isPrivate": false,
+      "metaSortKey": 1658489374128,
+      "_type": "environment"
+    }
+  ]
+}
