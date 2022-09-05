@@ -3,7 +3,9 @@ name: ci-reniec
 on:
   pull_request:
     branches: main
-
+defaults:
+  run:
+    working-directory: apps/reniec
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,8 +20,5 @@ jobs:
           cache: "npm"
           cache-dependency-path: apps/reniec/package-lock.json
       - run: npm ci
-        working-directory: apps/reniec/
       - run: npm run build --if-present
-        working-directory: apps/reniec/
       - run: npm run test:acceptance
-        working-directory: apps/reniec/
